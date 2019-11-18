@@ -1,0 +1,8 @@
+
+glaunch: gener.cpp
+	clear
+	gcc  gener.cpp -o glaunch -lstdc++
+	ctags -R .
+clean: 
+	rm -rf glaunch
+	rm *.txt
