@@ -12,9 +12,10 @@ info:
 	@echo ========================================================
 
 launch:$(SRC)
-	gcc $(SRC) -g -o launch -lstdc++
+	gcc --coverage $(SRC) -g -o launch -lstdc++
 	ctags -R .
 	./launch
+	@gcov $(SRC) -m
 
 mygprof:$(SRC)
 	gcc -pg $(SRC) -o launch -lstdc++
